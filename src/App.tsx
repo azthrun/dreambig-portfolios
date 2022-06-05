@@ -11,14 +11,14 @@ const App = () => {
 
   return (
     <AnimatePresence exitBeforeEnter>
-      <NavBar>
-        <Routes location={ location } key={ location.key }>
-          <Route path="/" element={ <Home /> } />
+      <Routes location={ location } key={ location.pathname }>
+        <Route path="/" element={ <NavBar /> }>
+          <Route index element={ <Home /> } />
           <Route path="/showcase" element={ <Showcase /> } />
           <Route path="/about" element={ <About /> } />
           <Route path="*" element={ <NotFound /> } />
-        </Routes>
-      </NavBar>
+        </Route>
+      </Routes>
     </AnimatePresence>
   );
 }
