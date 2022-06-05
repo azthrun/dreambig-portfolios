@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import Icon from "@mdi/react";
-import { mdiRocketLaunchOutline, mdiMenu, mdiClose } from "@mdi/js";
+import { mdiHomeOutline, mdiMenu, mdiClose } from "@mdi/js";
 import { motion } from "framer-motion";
 import "../styles/NavBar.css";
 import useAnimations from "../hooks/useAnimations";
@@ -27,18 +27,14 @@ const NavBar = () => {
     return (
         <>
             <header className="header">
-                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
+                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hoverHome"
                     onClick={ () => navigateTo("") }>
-                    <Icon path={ mdiRocketLaunchOutline } size="20px" style={{ marginRight: "10px"}} />
-                    <div>Terry Chen</div>
+                    <Icon path={ mdiHomeOutline } size="20px" style={{ marginRight: "10px"}} />
+                    <div>Home</div>
                 </motion.div>
                 {
                     !showNavPanel &&
                     <>
-                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                            onClick={ () => navigateTo("") }>
-                            Home
-                        </motion.div>
                         <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
                             onClick={ () => navigateTo("showcase") }>
                             Showcases

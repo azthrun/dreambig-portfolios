@@ -20,7 +20,7 @@
 .header > .nav-item:first-child{
     display: flex;
     align-items: center;
-    background-color: #326654;
+    background-color: #100a7e;
     font-weight: bold;
     padding: 15px 30px 15px 20px;
 }

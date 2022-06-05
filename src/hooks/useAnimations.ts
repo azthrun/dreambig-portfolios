@@ -1,22 +1,22 @@
 const useAnimations = () => {
     const pageAnimation = {
         begin: {
-            rotateY: 180,
             opacity: 0,
         },
         enter: {
-            rotateY: [180, 95, 85, 60, 30, 0],
-            opacity: [0, 0, 1, 1, 1, 1],
-            originX: "50%",
+            opacity: 1,
+            transition: { ease: 'easeInOut', delay: 0.3, duration: 0.5, },
         },
         exit: {
-            rotateY: [0, -30, -60, -85, -95, -180],
-            opacity: [1, 1, 1, 1, 0, 0],
-            originX: "50%",
+            opacity: 0,
+            transition: { ease: 'easeInOut', duration: 0.5, },
         }
     }
 
     const navBarTitleAnimation = {
+        hoverHome: {
+            scale: 1.1,
+        },
         hover: {
             color: "#ffcc99",
             x: [0, -5, 0, -7, 0, -5, 0],

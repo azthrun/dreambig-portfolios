@@ -13,6 +13,8 @@ const NotFound = () => {
         if (countDown < 0) {
             navigate("/");
         }
+        
+        // eslint-disable-next-line
     }, [countDown]);
 
     return (
