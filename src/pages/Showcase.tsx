@@ -5,11 +5,23 @@ const Showcase = () => {
     const { pageAnimation } = useAnimations();
     
     return (
-        <AnimatePresence exitBeforeEnter>
-            <motion.div variants={ pageAnimation } initial="begin" animate="enter" exit="exit">
-                <div>Showcase</div>
-            </motion.div>
-        </AnimatePresence>
+        <motion.div variants={ pageAnimation } initial="begin" animate="enter" exit="exit">
+            <div>Showcase</div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero accusamus vel temporibus, maiores earum fugit tempora voluptate magni praesentium, quia consequuntur. Doloribus ad deleniti consectetur neque vel est fugit?</p>
+        </motion.div>
     );
 }
 

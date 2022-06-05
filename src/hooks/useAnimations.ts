@@ -1,15 +1,18 @@
 const useAnimations = () => {
     const pageAnimation = {
         begin: {
+            rotateY: 180,
             opacity: 0,
         },
         enter: {
-            opacity: 1,
-            transition: { ease: 'easeInOut', delay: 0.3, duration: 0.5, },
+            rotateY: [180, 150, 120, 95, 85, 60, 30, 0],
+            opacity: [0, 0, 0, 0, 1, 1, 1, 1],
+            originX: "50%",
         },
         exit: {
-            opacity: 0,
-            transition: { ease: 'easeInOut', duration: 0.5, },
+            rotateY: [0, -30, -60, -85, -95, -120, -150, -180],
+            opacity: [1, 1, 1, 1, 0, 0, 0, 0],
+            originX: "50%",
         }
     }
 
