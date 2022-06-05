@@ -33,10 +33,29 @@ const useAnimations = () => {
         },
     }
 
+    const homeAvatarAnimation = {
+        hover: {
+            boxShadow: "0 0 2px 2px #cfe2f3, 0 0 4px 4px #ddeaf6, 0 0 5px 5px #e7f0f9",
+        }
+    }
+
+    const homeProfileContactBtnAnimation = {
+        hover: {
+            scale: 1.1,
+            cursor: "pointer",
+        },
+        tap: {
+            scale: 0.9,
+            cursor: "pointer",
+        }
+    }
+
     return {
         pageAnimation,
         navBarTitleAnimation,
         navBarMenuAnimation,
+        homeAvatarAnimation,
+        homeProfileContactBtnAnimation,
     };
 }
 
