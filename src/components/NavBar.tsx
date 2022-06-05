@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiZodiacLeo, mdiMenu, mdiClose } from "@mdi/js";
 import { motion, AnimatePresence } from "framer-motion";
-import "../styles/Header.css";
+import "../styles/NavBar.css";
 import useAnimations from "../hooks/useAnimations";
 
 const NavBar = ({ children } : { children : React.ReactNode}) => {
@@ -32,18 +32,23 @@ const NavBar = ({ children } : { children : React.ReactNode}) => {
                     <Icon path={ mdiZodiacLeo } size="20px" style={{ marginRight: "10px"}} />
                     <div>Terry Chen</div>
                 </motion.div>
-                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                    onClick={ () => navigateTo("") }>
-                    Home
-                </motion.div>
-                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                    onClick={ () => navigateTo("showcase") }>
-                    Showcases
-                </motion.div>
-                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                    onClick={ () => navigateTo("about") }>
-                    About
-                </motion.div>
+                {
+                    !showNavPanel &&
+                    <>
+                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
+                            onClick={ () => navigateTo("") }>
+                            Home
+                        </motion.div>
+                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
+                            onClick={ () => navigateTo("showcase") }>
+                            Showcases
+                        </motion.div>
+                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
+                            onClick={ () => navigateTo("about") }>
+                            About
+                        </motion.div>
+                    </>
+                }
                 <div className="icon" onClick={ toggleNavPanelDisplay }>
                     <Icon path={ mdiMenu } />
                 </div>
