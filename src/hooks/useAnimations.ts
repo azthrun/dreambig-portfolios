@@ -15,7 +15,8 @@ const useAnimations = () => {
 
     const navBarTitleAnimation = {
         hoverHome: {
-            scale: 1.1,
+            color: "#93973a",
+            transition: { duration: 0.5, },
         },
         hover: {
             color: "#ffcc99",
@@ -39,14 +40,12 @@ const useAnimations = () => {
         }
     }
 
-    const homeProfileContactBtnAnimation = {
+    const defaultButtonAnimation = {
         hover: {
             scale: 1.1,
-            cursor: "pointer",
         },
         tap: {
             scale: 0.9,
-            cursor: "pointer",
         }
     }
 
@@ -55,7 +54,7 @@ const useAnimations = () => {
         navBarTitleAnimation,
         navBarMenuAnimation,
         homeAvatarAnimation,
-        homeProfileContactBtnAnimation,
+        defaultButtonAnimation,
     };
 }
 
