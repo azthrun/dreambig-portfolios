@@ -22,6 +22,12 @@
     align-items: center;
 }
 
+.showcases-header > h1 {
+    background-image: linear-gradient(to right bottom, #e56b6f 0%, #6d597a 100%);
+    background-clip: text;
+    color: transparent;
+}
+
 .showcases-header > div {
     color: #c6edf4;
     margin-left: auto;

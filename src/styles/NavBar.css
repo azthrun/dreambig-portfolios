@@ -5,6 +5,7 @@
     width: 100%;
     align-items: center;
     background-color: #2f2f2f;
+    z-index: 99;
 }
 
 .header > .nav-item {

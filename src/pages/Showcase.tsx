@@ -10,7 +10,7 @@ import ProjectCard from "../components/ProjectCard";
 const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
     const navigate = useNavigate();
     const { pageAnimation, defaultButtonAnimation } = useAnimations();
-    const projects = useAsPage ? getHighlighted() : getAll();
+    const projects = useAsPage ? getAll() : getHighlighted();
     
     const gotoShowcasePage = () => {
         navigate("/showcase");
@@ -40,7 +40,7 @@ const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
                     useAsPage && <div style={{ marginTop: "15px" }}></div>
                 }
                 {
-                    projects.map(project => <ProjectCard project={ project } />)
+                    projects.map(project => <ProjectCard project={ project } key={ project.id } />)
                 }
             </div>
         </motion.div>
