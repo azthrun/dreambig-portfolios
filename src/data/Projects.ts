@@ -26,7 +26,7 @@ const projects : Project[] = [
     },
     {
         id: 2,
-        title: "DreamBig Todos",
+        title: "DreamBig To-Dos",
         description: "A React TypeScript web application managing To-do items, protected by Google Authentications and supported by Firebase/Firestore technologies.",
         website: "https://dreambig-todos.web.app",
         github: "https://github.com/azthrun/dreambig-todos",
@@ -37,7 +37,7 @@ const projects : Project[] = [
     {
         id: 3,
         title: "Calendar Web3.0",
-        description: "An appointment scheduling site interacting with Ethereum blockchain (testnet), implemented with Web3 technologies (Smart Contract using Solidity, Web3.js, and Ether.js).<br/>Users pay the calendar owner with Ethereum in order to making appointments with the owner.<br/>All data used in this website are stored on the blockchain (testnet).",
+        description: "An appointment scheduling site interacting with Ethereum blockchain (testnet), implemented with Web3 technologies. <br/>All data used in this website are stored on the blockchain (testnet).",
         website: null,
         github: "https://github.com/azthrun/learning-web3",
         imageFolder: "img/calendar",
@@ -51,7 +51,7 @@ const projects : Project[] = [
         website: null,
         github: "https://github.com/azthrun/CHaN/tree/main/dotnet/Inventory.Api",
         imageFolder: null,
-        tags: ["ASP.NET", "Azure", "Cosmos"],
+        tags: [".NET", "Azure", "Cosmos"],
         highlight: false,
     },
 ];

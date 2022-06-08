@@ -1,6 +1,6 @@
 .showcases {
     width: 60%;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -17,7 +17,7 @@
 .showcases-header {
     display: flex;
     width: 60%;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: auto;
     align-items: center;
 }
@@ -46,7 +46,11 @@
 }
 
 @media screen and (max-width: 580px) {
-    .showcases, .showcases-header {
+    .showcases {
+        width: 80%;
+    }
+    
+    .showcases-header {
         width: 80%;
     }
 
@@ -60,7 +64,12 @@
 }
 
 @media screen and (max-width: 295px) {
-    .showcases, .showcases-header {
+    .showcases {
         width: 90%;
+    }
+    
+    .showcases-header {
+        width: 90%;
+        font-size: x-large;
     }
 }
