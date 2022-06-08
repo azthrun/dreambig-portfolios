@@ -72,7 +72,7 @@
     max-height: 400px;
 }
 
-.project-card-layout.left {
+.project-card-layout.gallery {
     width: 50%;
 }
 
@@ -81,11 +81,11 @@
     max-height: 400px;
 }
 
-.project-card-layout.right {
+.project-card-layout.content {
     width: 50%;
 }
 
-.project-card-layout.right > .project-card-content {
+.project-card-layout.content > .project-card-content {
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -95,11 +95,11 @@
 }
 
 @media screen and (max-width: 2000px) {
-    .project-card-layout.left {
+    .project-card-layout.gallery {
         width: 60%;
     }
 
-    .project-card-layout.right {
+    .project-card-layout.content {
         width: 40%;
     }
 }
@@ -115,6 +115,18 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .project-card-layout {
+        display: inline-block;
+    }
+
+    .project-card-layout.gallery {
+        width: 100%;
+    }
+
+    .project-card-layout.content {
+        width: 100%;
+    }
+
     .project-card-media > img {
         width: 100%;
     }
