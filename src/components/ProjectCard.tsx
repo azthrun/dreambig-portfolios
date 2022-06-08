@@ -39,11 +39,11 @@ const ProjectCard = ({ project } : { project : Project}) => {
             <div className="project-card-footer">
                 {
                     project.website &&
-                    <a href={ project.website } target="_blank" rel="noreferrer">Site</a>
+                    <a className="site" href={ project.website } target="_blank" rel="noreferrer">Site</a>
                 }
                 {
                     project.github &&
-                    <a href={ project.github } target="_blank" rel="noreferrer">GitHub</a>
+                    <a className="github" href={ project.github } target="_blank" rel="noreferrer">GitHub</a>
                 }
             </div>
         </div>

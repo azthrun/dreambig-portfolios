@@ -6,6 +6,7 @@ import useAnimations from "../hooks/useAnimations";
 import "../styles/Showcase.css";
 import { getAll, getHighlighted } from "../data/Projects";
 import ProjectCard from "../components/ProjectCard";
+import Footer from "../components/Footer";
 
 const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
     const navigate = useNavigate();
@@ -35,6 +36,7 @@ const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
                     </motion.div>
                 </div>
             }
+            
             <div className="showcases">
                 {
                     useAsPage && <div style={{ marginTop: "15px" }}></div>
@@ -43,6 +45,8 @@ const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
                     projects.map(project => <ProjectCard project={ project } key={ project.id } />)
                 }
             </div>
+
+            { useAsPage && <Footer footerRef={ null } /> }
         </motion.div>
     );
 }

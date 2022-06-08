@@ -27,7 +27,7 @@ const NavBar = () => {
     return (
         <>
             <header className="header">
-                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hoverHome"
+                <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
                     onClick={ () => navigateTo("") }>
                     <Icon path={ mdiHomeOutline } size="20px" style={{ marginRight: "10px"}} />
                     <div>Home</div>
@@ -38,10 +38,6 @@ const NavBar = () => {
                         <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
                             onClick={ () => navigateTo("showcase") }>
                             Showcases
-                        </motion.div>
-                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                            onClick={ () => navigateTo("about") }>
-                            About
                         </motion.div>
                     </>
                 }
@@ -55,7 +51,6 @@ const NavBar = () => {
                             <menu>
                                 <div className="nav-item" onClick={ () => navigateTo("") }>Home</div>
                                 <div className="nav-item" onClick={ () => navigateTo("showcase") }>Showcases</div>
-                                <div className="nav-item" onClick={ () => navigateTo("about") }>About</div>
                                 <div className="icon" onClick={ toggleNavPanelDisplay }>
                                     <Icon path={ mdiClose } />
                                 </div>

@@ -14,10 +14,6 @@ const useAnimations = () => {
     }
 
     const navBarTitleAnimation = {
-        hoverHome: {
-            color: "#93973a",
-            transition: { duration: 0.5, },
-        },
         hover: {
             color: "#ffcc99",
             x: [0, -5, 0, -7, 0, -5, 0],

@@ -1,0 +1,93 @@
+
+
+footer {
+    border-top: 1px solid gray;
+}
+
+footer > div {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+}
+
+footer h1:first-child {
+    margin-right: 40px;
+    flex-grow: 0;
+}
+
+footer div.contacts {
+    display: flex;
+    align-items: center;
+}
+
+footer div.contacts > a {
+    width: 80px;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
+footer div.contacts > a.email {
+    background-color: #4000ff;
+    border: 1px solid #4000ff;
+}
+
+footer div.contacts > a.linkedin {
+    background-color: #0c467f;
+    border: 1px solid #0c467f;
+}
+
+footer div.contacts > a.twitter {
+    background-color: #198cff;
+    border: 1px solid #198cff;
+}
+
+footer div.contacts > a.github {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+@media screen and (max-width: 1200px) {
+    footer h1:first-child {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        margin-bottom: 10px;
+    }
+
+    footer h1:first-child {
+        margin-right: 0;
+    }
+
+    footer > div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    footer div.contacts {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer div.contacts > a.left {
+        width: 35%;
+    }
+
+    footer div.contacts > a.right {
+        width: 35%;
+    }
+
+    footer div.contacts > a {
+        margin-bottom: 5px;
+    }
+}
