@@ -9,7 +9,7 @@
 .header > .nav-bar {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 60%;
     margin: auto;
 }
 
@@ -46,6 +46,24 @@ div.icon:hover {
 
 .header > .nav-bar > div.icon {
     display: none;
+}
+
+@media screen and (max-width: 2700px) {
+    .header > .nav-bar {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .header > .nav-bar {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header > .nav-bar {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 580px) {
