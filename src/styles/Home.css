@@ -22,6 +22,7 @@
     border-radius: 50%;
     background-color: #d8dfe5;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .home-header .name {

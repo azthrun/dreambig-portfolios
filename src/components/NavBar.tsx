@@ -39,6 +39,10 @@ const NavBar = () => {
                             onClick={ () => navigateTo("showcase") }>
                             Showcases
                         </motion.div>
+                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
+                            onClick={ () => navigateTo("about") }>
+                            About
+                        </motion.div>
                     </>
                 }
                 <div className="icon" onClick={ toggleNavPanelDisplay }>
@@ -51,6 +55,7 @@ const NavBar = () => {
                             <menu>
                                 <div className="nav-item" onClick={ () => navigateTo("") }>Home</div>
                                 <div className="nav-item" onClick={ () => navigateTo("showcase") }>Showcases</div>
+                                <div className="nav-item" onClick={ () => navigateTo("about") }>About</div>
                                 <div className="icon" onClick={ toggleNavPanelDisplay }>
                                     <Icon path={ mdiClose } />
                                 </div>
