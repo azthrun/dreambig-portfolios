@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
     const navigate = useNavigate();
-    const [countDown, setCountDown] = useState<number>(5);
+    const [countDown, setCountDown] = useState<number>(3);
 
     useEffect(() => {
         setTimeout(() => {
@@ -18,11 +18,7 @@ const NotFound = () => {
     }, [countDown]);
 
     return (
-        <div style={{
-            fontSize: "30px",
-            marginTop: "50px",
-            textAlign: "center",
-        }}>
+        <div style={{ fontSize: "30px", marginTop: "50px", textAlign: "center", }}>
             <strong>Page Not Found</strong>
             <p style={{ fontSize: "20px" }}>
                 <em>

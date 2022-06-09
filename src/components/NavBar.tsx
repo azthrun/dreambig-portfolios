@@ -1,61 +1,71 @@
-import { useEffect, useState } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiHomeOutline, mdiMenu, mdiClose } from "@mdi/js";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-scroll";
+
 import "../styles/NavBar.css";
 import useAnimations from "../hooks/useAnimations";
 
-const NavBar = () => {
-    const navigate = useNavigate();
+interface Props {
+    scrollToTop: () => void;
+    toggleNavPanelDisplay: () => void;
+    showNavPanel: boolean;
+}
+
+const NavBar = ({ scrollToTop, toggleNavPanelDisplay, showNavPanel } : Props) => {
     const { navBarTitleAnimation, navBarMenuAnimation } = useAnimations();
-    const [showNavPanel, setShowNavPanel] = useState<boolean>(false);
-
-    useEffect(() => {
-        const screenRotate = () => setShowNavPanel(false);
-        window.addEventListener("orientationchange", screenRotate);
-        return () => window.removeEventListener("orientationchange", screenRotate);
-    }, []);
-
-    const toggleNavPanelDisplay = () => setShowNavPanel(prev => !prev);
-
-    const navigateTo = (pageName : string) => {
-        navigate(`/${pageName}`);
-        setShowNavPanel(false);
-    }
 
     return (
-        <>
-            <header className="header">
+        <header className="header">
+            <div className="nav-bar">
                 <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                    onClick={ () => navigateTo("") }>
+                    onClick={ scrollToTop }>
                     <Icon path={ mdiHomeOutline } size="20px" style={{ marginRight: "10px"}} />
                     <div>Home</div>
                 </motion.div>
                 {
                     !showNavPanel &&
                     <>
-                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                            onClick={ () => navigateTo("showcase") }>
-                            Showcases
-                        </motion.div>
-                        <motion.div className="nav-item" variants={ navBarTitleAnimation } whileHover="hover"
-                            onClick={ () => navigateTo("about") }>
-                            About
-                        </motion.div>
+                        <Link to="showcase" spy={true} smooth={true} offset={-80} duration={500} className="nav-item">
+                            <motion.div variants={ navBarTitleAnimation } whileHover="hover">
+                                    Showcases
+                            </motion.div>
+                        </Link>
+                        <Link to="about" spy={true} smooth={true} offset={-80} duration={500} className="nav-item">
+                            <motion.div variants={ navBarTitleAnimation } whileHover="hover">
+                                About Me
+                            </motion.div>
+                        </Link>
+                        <Link to="contacts" spy={true} smooth={true} offset={0} duration={500} className="nav-item">
+                            <motion.div variants={ navBarTitleAnimation } whileHover="hover">
+                                Contacts
+                            </motion.div>
+                        </Link>
                     </>
                 }
                 <div className="icon" onClick={ toggleNavPanelDisplay }>
                     <Icon path={ mdiMenu } />
                 </div>
+            </div>
+            <AnimatePresence>
                 {
                     showNavPanel &&
                     <div className="menu-container">
-                        <motion.div variants={ navBarMenuAnimation } initial="begin" animate="enter">
+                        <motion.div variants={ navBarMenuAnimation } initial="begin" animate="enter" exit="exit">
                             <menu>
-                                <div className="nav-item" onClick={ () => navigateTo("") }>Home</div>
-                                <div className="nav-item" onClick={ () => navigateTo("showcase") }>Showcases</div>
-                                <div className="nav-item" onClick={ () => navigateTo("about") }>About</div>
+                                <div className="nav-item" onClick={ scrollToTop }>Home</div>
+                                <Link to="showcase" spy={ true } smooth={ true } offset={ -80 } 
+                                    duration={ 500 } className="nav-item">
+                                    Showcases
+                                </Link>
+                                <Link to="about" spy={ true } smooth={ true } offset={ -80 } 
+                                    duration={ 500 } className="nav-item">
+                                    About Me
+                                </Link>
+                                <Link to="contacts" spy={ true } smooth={ true } offset={ -80 } 
+                                    duration={ 500 } className="nav-item">
+                                    Contacts
+                                </Link>
                                 <div className="icon" onClick={ toggleNavPanelDisplay }>
                                     <Icon path={ mdiClose } />
                                 </div>
@@ -63,9 +73,8 @@ const NavBar = () => {
                         </motion.div>
                     </div>
                 }
-            </header>
-            <Outlet />
-        </>
+            </AnimatePresence>
+        </header>
     )
 }
 

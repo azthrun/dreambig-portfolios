@@ -1,49 +1,65 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
+import { Events, animateScroll, Link } from "react-scroll";
 import useAnimations from "../hooks/useAnimations";
+
 import "../styles/Home.css";
-import Showcase from "./Showcase";
+import Footer from "../components/Footer";
+import Showcase from "../components/Showcase";
+import About from "../components/About";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
     const { pageAnimation, homeAvatarAnimation, defaultButtonAnimation } = useAnimations();
-    const headerRef = useRef<HTMLDivElement>();
-    const showcaseRef = useRef<HTMLDivElement>(); 
-    const footerRef = useRef<HTMLDivElement>();
-    const navigate = useNavigate();
+    const [showNavPanel, setShowNavPanel] = useState<boolean>(false);
 
-    const scrollToFooter = () => footerRef.current?.scrollIntoView();
+    useEffect(() => {
+        Events.scrollEvent.register("begin", () => { 
+            setShowNavPanel(false);
+        });
+        Events.scrollEvent.register("end", () => { });
+        
+        return () => {
+            Events.scrollEvent.remove("begin");
+            Events.scrollEvent.remove("end");
+        };
+    }, []);
 
-    const gotoAboutPage = () => navigate("/about");
-
-    const gotoSection = (element : HTMLDivElement) => {
-
-    }
+    const toggleNavPanelDisplay = () => setShowNavPanel(prev => !prev);
     
     return (
         <motion.div variants={ pageAnimation } initial="begin" animate="enter" exit="exit">
-            <div className="home-header" ref={ headerRef as React.RefObject<HTMLDivElement> }>
+            <NavBar scrollToTop={ animateScroll.scrollToTop } 
+                toggleNavPanelDisplay={ toggleNavPanelDisplay}
+                showNavPanel={ showNavPanel } />
+
+            <div className="home-header">
                 <div>
-                    <div className="avatar" onClick={ gotoAboutPage } title="profile">
-                        <motion.img src="img/profile.png" alt="profile image" 
-                            variants={ homeAvatarAnimation } whileHover="hover" />
+                    <div className="avatar" title="profile">
+                        <Link to="about" spy={true} smooth={true} offset={-80} duration={500}>
+                            <motion.img src="img/profile.png" alt="profile image" 
+                                variants={ homeAvatarAnimation } whileHover="hover" />
+                        </Link>
                     </div>
                     <div>
                         <div className="name">Terry Chen</div>
                         <div className="title">Software Engineer</div>
-                        <motion.button className="contact-btn" variants={ defaultButtonAnimation }
-                            whileHover="hover" whileTap="tap"
-                            onClick={ scrollToFooter }>
-                            Get in touch
-                        </motion.button>
+                        <Link to="contacts" spy={true} smooth={true} offset={-80} duration={500}>
+                            <motion.button variants={ defaultButtonAnimation }
+                                whileHover="hover" whileTap="tap" className="contact-btn">
+                                Get in touch
+                            </motion.button>
+                        </Link>
                     </div>
                 </div>
             </div>
             
-            <Showcase useAsPage={ false } showcaseRef={ showcaseRef as React.RefObject<HTMLDivElement> } />
+            <div className="home-content">
+                <Showcase />
+                <About />
+            </div>
 
-            <Footer footerRef={ footerRef as React.RefObject<HTMLDivElement> } />
+            <Footer />
         </motion.div>
     );
 }

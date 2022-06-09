@@ -16,7 +16,7 @@
     padding-top: 60px;
 }
 
-.home-header > div > .avatar > img {
+.home-header > div > .avatar > a > img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -48,7 +48,17 @@
     cursor: pointer;
 }
 
+.home-content {
+    width: 60%;
+    max-width: 1300px;
+    margin: auto;
+}
+
 @media screen and (max-width: 1200px) {
+    .home-content {
+        width: 70%;
+    }
+
     footer h1:first-child {
         flex-grow: 1;
     }
@@ -69,6 +79,10 @@
 }
 
 @media screen and (max-width: 580px) {
+    .home-content {
+        width: 80%;
+    }
+
     .home-header {
         height: 400px;
     }
@@ -103,5 +117,11 @@
 @media screen and (max-width: 313px) {
     .home-header {
         height: 430px;
+    }
+}
+
+@media screen and (max-width: 295px) {
+    .home-content {
+        width: 90%;
     }
 }

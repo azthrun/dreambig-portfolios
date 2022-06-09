@@ -1,22 +1,12 @@
 .showcases {
-    width: 60%;
+    width: 100%;
     max-width: 1300px;
     margin: auto;
 }
 
-.showcases-banner {
-    position: sticky;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to right bottom, #100a7e 0%, #1c1cbe 45%, #1a5f93 100%);
-    z-index: -1;
-}
-
 .showcases-header {
     display: flex;
-    width: 60%;
+    width: 100%;
     max-width: 1300px;
     margin: auto;
     align-items: center;
@@ -39,21 +29,7 @@
     font-size: 20px;
 }
 
-@media screen and (max-width: 1200px) {
-    .showcases, .showcases-header {
-        width: 70%;
-    }
-}
-
 @media screen and (max-width: 580px) {
-    .showcases {
-        width: 80%;
-    }
-    
-    .showcases-header {
-        width: 80%;
-    }
-
     .showcases-header .view-all-text {
         display: none;
     }
@@ -64,10 +40,6 @@
 }
 
 @media screen and (max-width: 295px) {
-    .showcases {
-        width: 90%;
-    }
-    
     .showcases-header {
         width: 90%;
         font-size: small;
