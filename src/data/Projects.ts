@@ -58,7 +58,7 @@ const projects : Project[] = [
         id: 5,
         title: "React Portfolio",
         description: "A Web2.0 application displaying my portfolio (this website), implemented with React and TypeScript.",
-        website: null,
+        website: "https://dreambig-portfolios.web.app/",
         github: "https://github.com/azthrun/dreambig-portfolios",
         imageFolder: "img/portfolio",
         tags: ["React", "TypeScript"],
