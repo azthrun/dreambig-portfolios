@@ -28,6 +28,10 @@ const useAnimations = () => {
         enter: {
             x: 0,
         },
+        exit: {
+            opacity: 0,
+            transition: { ease: 'easeInOut', duration: 0.3, },
+        }
     }
 
     const homeAvatarAnimation = {

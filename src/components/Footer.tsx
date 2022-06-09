@@ -1,9 +1,9 @@
 import "../styles/Footer.css";
 
-const Footer = ({ footerRef } : { footerRef : React.RefObject<HTMLDivElement> | null }) => {
+const Footer = () => {
     return (
         <footer>
-            <div ref={ footerRef }>
+            <div id="contacts">
                 <h1>Find Me</h1>
                 <div className="contacts">
                     <a className="email left" href="mailto:sterryc1986@gmail.com">Email</a>

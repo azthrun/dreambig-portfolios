@@ -54,4 +54,14 @@ const projects : Project[] = [
         tags: [".NET", "Azure", "Cosmos"],
         highlight: false,
     },
+    {
+        id: 5,
+        title: "React Portfolio",
+        description: "A Web2.0 application displaying my portfolio (this website), implemented with React and TypeScript.",
+        website: null,
+        github: "https://github.com/azthrun/dreambig-portfolios",
+        imageFolder: "img/portfolio",
+        tags: ["React", "TypeScript"],
+        highlight: false,
+    },
 ];
