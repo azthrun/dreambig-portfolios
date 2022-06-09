@@ -8,16 +8,22 @@ import Showcase from "./Showcase";
 
 const Home = () => {
     const { pageAnimation, homeAvatarAnimation, defaultButtonAnimation } = useAnimations();
+    const headerRef = useRef<HTMLDivElement>();
+    const showcaseRef = useRef<HTMLDivElement>(); 
     const footerRef = useRef<HTMLDivElement>();
     const navigate = useNavigate();
 
     const scrollToFooter = () => footerRef.current?.scrollIntoView();
 
     const gotoAboutPage = () => navigate("/about");
+
+    const gotoSection = (element : HTMLDivElement) => {
+
+    }
     
     return (
         <motion.div variants={ pageAnimation } initial="begin" animate="enter" exit="exit">
-            <div className="home-header">
+            <div className="home-header" ref={ headerRef as React.RefObject<HTMLDivElement> }>
                 <div>
                     <div className="avatar" onClick={ gotoAboutPage } title="profile">
                         <motion.img src="img/profile.png" alt="profile image" 
@@ -35,7 +41,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <Showcase useAsPage={ false } />
+            <Showcase useAsPage={ false } showcaseRef={ showcaseRef as React.RefObject<HTMLDivElement> } />
 
             <Footer footerRef={ footerRef as React.RefObject<HTMLDivElement> } />
         </motion.div>

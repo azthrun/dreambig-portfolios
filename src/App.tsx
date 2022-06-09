@@ -14,7 +14,10 @@ const App = () => {
       <Routes location={ location } key={ location.pathname }>
         <Route path="/" element={ <NavBar /> }>
           <Route index element={ <Home /> } />
-          <Route path="/showcase" element={ <Showcase useAsPage={ true } /> } />
+          <Route path="/showcase" element={ 
+            <Showcase useAsPage={ true } showcaseRef={ null } /> 
+            } 
+            />
           <Route path="/about" element={ <About /> } />
           <Route path="*" element={ <NotFound /> } />
         </Route>

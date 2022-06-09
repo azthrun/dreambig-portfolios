@@ -4,7 +4,6 @@
     display: flex;
     width: 100%;
     align-items: center;
-    /* background-color: #2f2f2f; */
     background-image: linear-gradient(to right, #100a7e 0%, #1c1cbe 100%);
     z-index: 99;
 }

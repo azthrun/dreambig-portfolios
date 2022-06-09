@@ -8,7 +8,12 @@ import { getAll, getHighlighted } from "../data/Projects";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 
-const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
+interface Props {
+    useAsPage : boolean; 
+    showcaseRef : React.RefObject<HTMLDivElement> | null;
+}
+
+const Showcase = ({ useAsPage, showcaseRef } : Props) => {
     const navigate = useNavigate();
     const { pageAnimation, defaultButtonAnimation } = useAnimations();
     const projects = useAsPage ? getAll() : getHighlighted();
@@ -18,7 +23,8 @@ const Showcase = ({ useAsPage } : { useAsPage : boolean }) => {
     }
 
     return (
-        <motion.div variants={ pageAnimation } initial="begin" animate="enter" exit="exit">
+        <motion.div variants={ pageAnimation } 
+            initial="begin" animate="enter" exit="exit" ref={ showcaseRef }>
             {
                 useAsPage &&
                 <div className="showcases-banner">
