@@ -10,6 +10,7 @@ import ProjectCard from "./ProjectCard";
 const Showcase = () => {
     const { defaultButtonAnimation } = useAnimations();
     const [projects, setProjects] = useState<Project[]>([]);
+    const [showButton, setShowButton] = useState(true);
 
     useEffect(() => {
         setProjects(getHighlighted());
@@ -17,24 +18,24 @@ const Showcase = () => {
 
     const showAllProjects = () => {
         setProjects(getAll());
+        setShowButton(false);
     }
 
     return (
         <div id="showcase">
-            <div className="showcases-header">
-                <h1>Showcases</h1>
-                <motion.div variants={ defaultButtonAnimation } whileHover="hover"  whileTap="tap"
-                    onClick={ showAllProjects }>
-                    <div className="view-all-text">view all</div>
-                    <div className="view-all-icon"><Icon path={ mdiBallotOutline } size="30px" /></div>
-                </motion.div>
-            </div>
-            
+            <h1 className="showcases-header">Showcases</h1>
             <div className="showcases">
                 {
                     projects.map(project => <ProjectCard project={ project } key={ project.id } />)
                 }
             </div>
+            {
+                showButton &&
+                <motion.button className="view-more-button" variants={ defaultButtonAnimation }
+                    whileHover="hover" whileTap="tap" onClick={ showAllProjects }>
+                    View More
+                </motion.button>
+            }
         </div>
     );
 }

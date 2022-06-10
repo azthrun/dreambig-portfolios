@@ -4,15 +4,7 @@
     margin: auto;
 }
 
-.showcases-header {
-    display: flex;
-    width: 100%;
-    max-width: 1300px;
-    margin: auto;
-    align-items: center;
-}
-
-.showcases-header > h1 {
+h1.showcases-header {
     background-image: linear-gradient(to right bottom, #0e7c0a 0%, #04d6c5 100%);
     background-clip: text;
     color: transparent;
@@ -24,24 +16,15 @@
     cursor: pointer;
 }
 
-.showcases-header .view-all-icon {
-    display: none;
-    font-size: 20px;
-}
-
-@media screen and (max-width: 580px) {
-    .showcases-header .view-all-text {
-        display: none;
-    }
-
-    .showcases-header .view-all-icon {
-        display: block;
-    }
-}
-
-@media screen and (max-width: 295px) {
-    .showcases-header {
-        width: 90%;
-        font-size: small;
-    }
+.view-more-button {
+    display: block;
+    width: 200px;
+    background-color: #6b03c0;
+    color: #d8dfe5;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 25px;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
 }
