@@ -55,8 +55,8 @@ const Home = () => {
             </div>
             
             <div className="home-content">
-                <Showcase />
                 <About />
+                <Showcase />
             </div>
 
             <Footer />
