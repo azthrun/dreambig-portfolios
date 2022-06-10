@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Icon from "@mdi/react";
-import { mdiBallotOutline } from "@mdi/js";
 import useAnimations from "../hooks/useAnimations";
 import "../styles/Showcase.css";
 import Project, { getAll, getHighlighted } from "../data/Projects";
