@@ -26,14 +26,14 @@ const NavBar = ({ scrollToTop, toggleNavPanelDisplay, showNavPanel } : Props) =>
                 {
                     !showNavPanel &&
                     <>
-                        <Link to="showcase" spy={true} smooth={true} offset={-80} duration={500} className="nav-item">
-                            <motion.div variants={ navBarTitleAnimation } whileHover="hover">
-                                    Showcases
-                            </motion.div>
-                        </Link>
                         <Link to="about" spy={true} smooth={true} offset={-80} duration={500} className="nav-item">
                             <motion.div variants={ navBarTitleAnimation } whileHover="hover">
                                 About Me
+                            </motion.div>
+                        </Link>
+                        <Link to="showcase" spy={true} smooth={true} offset={-80} duration={500} className="nav-item">
+                            <motion.div variants={ navBarTitleAnimation } whileHover="hover">
+                                    Showcases
                             </motion.div>
                         </Link>
                         <Link to="contacts" spy={true} smooth={true} offset={0} duration={500} className="nav-item">
@@ -54,13 +54,13 @@ const NavBar = ({ scrollToTop, toggleNavPanelDisplay, showNavPanel } : Props) =>
                         <motion.div variants={ navBarMenuAnimation } initial="begin" animate="enter" exit="exit">
                             <menu>
                                 <div className="nav-item" onClick={ scrollToTop }>Home</div>
-                                <Link to="showcase" spy={ true } smooth={ true } offset={ -80 } 
-                                    duration={ 500 } className="nav-item">
-                                    Showcases
-                                </Link>
                                 <Link to="about" spy={ true } smooth={ true } offset={ -80 } 
                                     duration={ 500 } className="nav-item">
                                     About Me
+                                </Link>
+                                <Link to="showcase" spy={ true } smooth={ true } offset={ -80 } 
+                                    duration={ 500 } className="nav-item">
+                                    Showcases
                                 </Link>
                                 <Link to="contacts" spy={ true } smooth={ true } offset={ -80 } 
                                     duration={ 500 } className="nav-item">
