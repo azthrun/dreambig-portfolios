@@ -6,7 +6,7 @@ const About = () => {
             <h1 className="about-header">About Me</h1>
             <ul className="about-list">
                 <li>
-                    <img src="img/developer.svg" alt="developer" />
+                    <img src="img/casual.svg" alt="casual" />
                     <div>
                         <h2>
                             Hey there! I'm Terry, a Full-Stack Software Engineer in Texas.
@@ -25,7 +25,7 @@ const About = () => {
                             <span>(2022 April - present)</span>
                         </h4>
                         <p>
-                            I am currently working as a Software Engineer, and responsible for developing and maintaining the a public facing website as well as the backend data services.
+                            I am currently working as a Software Engineer, and responsible for developing and maintaining a public facing website as well as the backend data services.
                         </p>
                         <h4>
                             Calpine

@@ -64,20 +64,6 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-    footer {
-        margin-bottom: 10px;
-    }
-
-    footer h1:first-child {
-        margin-right: 0;
-    }
-
-    footer > div {
-        flex-direction: column;
-    }
-}
-
 @media screen and (max-width: 580px) {
     .home-content {
         width: 80%;
@@ -91,26 +77,6 @@
         flex-direction: column;
         justify-content: start;
         padding-top: 25px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    footer div.contacts {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    footer div.contacts > a.left {
-        width: 35%;
-    }
-
-    footer div.contacts > a.right {
-        width: 35%;
-    }
-
-    footer div.contacts > a {
-        margin-bottom: 5px;
     }
 }
 
