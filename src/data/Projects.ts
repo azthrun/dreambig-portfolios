@@ -39,6 +39,17 @@ const projects : Project[] = [
     },
     {
         id: 3,
+        title: "DreamBig Repository",
+        description: "An .NET package solution that allows developers to quick generate repositoies if following the repository pattern. Shipped as part of the package, there are code generations which produce standard repository classes with very minimal changes required from the developer side. <br/>In the coming futuer, this package is expandable to adapt different document database besides Cosmos DB.",
+        website: null,
+        github: "https://github.com/azthrun/dreambig-repository",
+        imageFolder: null,
+        imageCount: 0,
+        tags: [".NET", "Cosmos"],
+        highlight: true,
+    },
+    {
+        id: 4,
         title: "Calendar Web3.0",
         description: "An appointment scheduling site interacting with Ethereum blockchain (testnet), implemented with Web3 technologies. <br/>All data used in this website are stored on the blockchain (testnet).",
         website: null,
@@ -49,7 +60,7 @@ const projects : Project[] = [
         highlight: true,
     },
     {
-        id: 4,
+        id: 5,
         title: "Inventory Api",
         description: "A .NET 6 web api with custom authentication provider that talks to Azure Cosmos database as the backend data storage",
         website: null,
@@ -60,7 +71,7 @@ const projects : Project[] = [
         highlight: false,
     },
     {
-        id: 5,
+        id: 6,
         title: "React Portfolio",
         description: "A Web2.0 application displaying my portfolio (this website), implemented with React and TypeScript.",
         website: "https://dreambig-portfolios.web.app/",

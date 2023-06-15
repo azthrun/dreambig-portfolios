@@ -12,7 +12,8 @@ const About = () => {
                             Hey there! I'm Terry, a Full-Stack Software Engineer in Texas.
                         </h2>
                         <p style={{ margin: "0, auto" }}>
-                            I was born and raised in Shenzhen, China, and am currently based in Houston, Texas. My main expertise lies in multi-platform mobile application development. I also do web applications and backend API developments. If you are impressed by what I showcase here, don't hesitate to contact me!
+                            I was born and raised in Shenzhen, China, and am currently based in Houston, Texas. My main tech stack is Microsoft .NET, but I also do web applications using various frameworks/packages such as but not limited to Angular, React, Flutter, etc. <br />
+                            If you are impressed by what I showcase here, don't hesitate to contact me!
                         </p>
                     </div>
                 </li>
@@ -25,15 +26,14 @@ const About = () => {
                             <span>(2022 April - present)</span>
                         </h4>
                         <p>
-                            I am currently working as a Software Engineer, and responsible for developing and maintaining a public facing website as well as the backend data services.
+                            I am a Fullstack Software Engineer in the team, and responsible for developing and maintaining several business public websites as well as the backend data services. With my expertise in .NET technologies, I develop new tools, implement enhancement requirements, analysis and troubleshoot reported issues, and also migrate legacy projects/solutions to morden frameworks.
                         </p>
                         <h4>
                             Calpine
                             <span>(2013 January - 2022 April)</span>
                         </h4>
                         <p>
-                            I worked as IT Analyst, and was mainly developing and maintaining several mobile applications using Microsoft technologies such as <em>Xamarin.Forms, .NET MAUI, and Azure Cloud Services (including App Services, KeyVault, Cosmos Database, Azure SQL, Azure Functions</em>, etc.). <br/>
-                            Besides mobile applications, I also developed integration services with Enterprise Assets Management system (IBM Maximo), as well as designed/developed SQL Server Reporting Services (SSRS) reports.
+                            I worked as IT Analyst, and was mainly developing and maintaining several mobile applications using Microsoft technologies such as <em>Xamarin.Forms, .NET MAUI, and Azure Cloud Services (including App Services, KeyVault, Cosmos Database, Azure SQL, Azure Functions</em>, etc.). Other than that, I implemented integration services with Enterprise Assets Management system (IBM Maximo), as well as designed/developed SQL Server Reporting Services (SSRS) reports.
                         </p>
                     </div>
                 </li>
