@@ -4,7 +4,7 @@ import { catchError, delay, of } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Profile } from '../types/profile.type';
 import environment from '../../environments/environment';
-import { Post, PostList } from '../types/post.type';
+import { PostList } from '../types/post.type';
 
 @Injectable()
 export class AppService {
@@ -39,17 +39,6 @@ export class AppService {
           profileId: this.profileId,
           posts: [],
         });
-      }),
-    );
-    return toSignal(data$);
-  }
-
-  public fetchPost(postId: string): Signal<Post | undefined> {
-    var data$ = this.httpClient.get<Post>(`${this.configs.apiUrl}/posts/${postId}`).pipe(
-      delay(700),
-      catchError((error) => {
-        console.error('Error fetching post', error);
-        return of(undefined);
       }),
     );
     return toSignal(data$);
