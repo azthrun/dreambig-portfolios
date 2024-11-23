@@ -6,7 +6,10 @@
                 <a [href]="post.link" target="_blank" class="text-slate-200 font-semibold text-wrap">{{ post.title }}</a>
             </div>
         }
+        @if (postListSig()!.posts.length === 0) {
+            <p class="text-center text-slate-400 italic mt-3">No articles found.</p>
+        }
     </div>
 } @else {
-    <p class="text-center text-slate-400 italic">Pulling article list...</p>
+    <p class="text-center text-slate-400 italic mt-3">Pulling article list...</p>
 }
