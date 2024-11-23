@@ -1,4 +1,4 @@
-@if (dataSig() != undefined) {
+@if (profileSig() != undefined) {
   <main>
     <dbp-titlebar />
 
@@ -17,7 +17,5 @@
     <router-outlet />
   </main>
 } @else {
-  <div class="flex items-center justify-center w-full h-full fixed left-0 top-0 z-50">
-    <div class="spinner"></div>
-  </div>
+  <dbp-loading />
 }

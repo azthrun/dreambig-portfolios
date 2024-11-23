@@ -10,5 +10,5 @@ import { AppService } from '../../services/app.service';
 export class TitlebarComponent {
   private readonly appService = inject(AppService);
 
-  public portfolioOwner = computed(() => this.appService.dataSig()?.portfolioOwner);
+  public portfolioOwner = computed(() => this.appService.profileSig()?.portfolioOwner);
 }

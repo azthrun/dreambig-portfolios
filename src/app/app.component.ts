@@ -4,11 +4,13 @@ import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { AppService } from './services/app.service';
 import { CommonModule } from '@angular/common';
 import { NavlinksComponent } from './components/navlinks/navlinks.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @Component({
     selector: 'dbp-root',
     imports: [
         CommonModule,
+        LoadingComponent,
         NavlinksComponent,
         RouterOutlet,
         TitlebarComponent,
@@ -20,6 +22,6 @@ import { NavlinksComponent } from './components/navlinks/navlinks.component';
 export class AppComponent {
   private readonly appService = inject(AppService);
 
-  public dataSig = this.appService.dataSig;
-  public selfDescription = computed(() => this.appService.dataSig()?.selfDescription);
+  public profileSig = this.appService.profileSig;
+  public selfDescription = computed(() => this.appService.profileSig()?.selfDescription);
 }

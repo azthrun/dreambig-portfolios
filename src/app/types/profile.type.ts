@@ -1,4 +1,4 @@
-export interface PageFeed {
+export interface Profile {
     portfolioOwner: string,
     selfDescription: string,
 }
