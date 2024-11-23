@@ -6,17 +6,16 @@ import { CommonModule } from '@angular/common';
 import { NavlinksComponent } from './components/navlinks/navlinks.component';
 
 @Component({
-  selector: 'dbp-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    NavlinksComponent,
-    RouterOutlet,
-    TitlebarComponent,
-  ],
-  providers: [AppService],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'dbp-root',
+    imports: [
+        CommonModule,
+        NavlinksComponent,
+        RouterOutlet,
+        TitlebarComponent,
+    ],
+    providers: [AppService],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   private readonly appService = inject(AppService);
