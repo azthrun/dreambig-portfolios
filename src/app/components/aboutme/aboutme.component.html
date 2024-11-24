@@ -7,9 +7,9 @@
         @if (experiencesSig() !== undefined) {
             <h2 class="text-2xl font-bold text-orange-600 mt-3" aria-label="Professional Experiences">Professional Experiences</h2>
             @for (experience of experiencesSig(); track experience.company) {
-                <div class="flex flex-wrap justify-between items-baseline">
+                <div class="flex flex-wrap justify-start items-baseline">
                     <h2 class="text-2xl font-bold text-blue-400 mt-2">{{ experience.company }}</h2>
-                    <span class="text-blue-200 text-sm italic ml-auto mr-5">{{ experience.startDate }} to {{ experience.endDate }}</span>
+                    <span class="text-blue-200 text-sm italic ml-5">({{ experience.startDate }} to {{ experience.endDate }})</span>
                 </div>
                 <p class="text-slate-200">{{ experience.value }}</p>
             }
