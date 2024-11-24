@@ -1,12 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { AppService } from '../../services/app.service';
-import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'dbp-articles',
-  imports: [
-    LoadingComponent,
-  ],
+  imports: [],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss'
 })

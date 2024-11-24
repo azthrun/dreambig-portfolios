@@ -1,0 +1,11 @@
+@if (contactsSig() !== undefined) {
+    <div class="w-[80%] md:w-[600px] grid grid-cols-{{ contactsSig()?.length }} mx-auto mt-3">
+        @for (contact of contactsSig(); track contact.type) {
+            <div class="flex justify-center items-center">
+                <img src="/assets/images/{{ contact.type }}.svg" alt="{{ contact.type }}" class="w-16 h-16">
+            </div>
+        }
+    </div>
+} @else {
+    <p class="text-center text-slate-400 italic mt-3">No contacts found.</p>
+}
