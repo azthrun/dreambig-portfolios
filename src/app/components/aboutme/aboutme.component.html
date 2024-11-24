@@ -1,0 +1,20 @@
+@if (aboutMeSig() !== undefined || experiencesSig() !== undefined) {
+    <div class="w-[80%] md:w-[75%] lg:w-[70%] max-w-[1000px] mx-auto mt-3">
+        @if (aboutMeSig() !== undefined) {
+            <h2 class="text-2xl font-bold text-orange-600">About Me</h2>
+            <p class="text-slate-200">{{ aboutMeSig() }}</p>
+        }
+        @if (experiencesSig() !== undefined) {
+            <h2 class="text-2xl font-bold text-orange-600 mt-3">Professional Experiences</h2>
+            @for (experience of experiencesSig(); track experience.company) {
+                <div class="flex flex-wrap justify-between items-baseline">
+                    <h2 class="text-2xl font-bold text-blue-400 mt-2">{{ experience.company }}</h2>
+                    <span class="text-blue-200 text-sm italic ml-auto mr-5">{{ experience.startDate }} to {{ experience.endDate }}</span>
+                </div>
+                <p class="text-slate-200">{{ experience.value }}</p>
+            }
+        }
+    </div>
+} @else {
+    <p class="text-center text-slate-400 italic mt-3">No descriptions found.</p>
+}
