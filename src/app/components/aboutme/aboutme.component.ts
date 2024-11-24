@@ -9,5 +9,5 @@ export class AboutMeComponent {
   private readonly appService = inject(AppService);
 
   public aboutMeSig = computed(() => this.appService.profileSig()?.aboutMe);
-  public experiencesSig = computed(() => this.appService.profileSig()?.experiences);
+  public experiencesSig = computed(() => this.appService.profileSig()?.experiences?.sort((a, b) => a.order - b.order));
 }

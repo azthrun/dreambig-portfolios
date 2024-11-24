@@ -12,6 +12,7 @@ interface Contact {
 }
 
 interface Experience {
+    order: number,
     value: string,
     company: string,
     startDate: string,
