@@ -1,13 +1,13 @@
 @if (profileSig() !== undefined) {
-  <main class="mb-10">
+  <main role="main" class="mb-10">
     <dbp-titlebar />
 
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-7 lg:gap-28 p-5">
       <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:shrink-0 rounded-full overflow-hidden mx-auto lg:mx-0">
-          <img src="/assets/images/profile.png" alt="profile" class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72">
+          <img src="/assets/images/profile.png" alt="profile" class="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72" aria-label="Owner picture">
       </div>
       <div class="flex flex-col gap-7 w-full lg:max-w-[40rem]">
-          <h1 class="text-2xl sm:text-3xl text-center text-slate-200">{{ selfDescription()}}</h1>
+          <h1 class="text-2xl sm:text-3xl text-center text-slate-200" aria-label="what does page owner do">{{ selfDescription()}}</h1>
           <dbp-navlinks />
       </div>
     </div>

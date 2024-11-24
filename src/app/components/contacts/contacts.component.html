@@ -2,10 +2,10 @@
     <div class="w-[80%] md:w-[600px] grid grid-cols-3 mx-auto mt-3">
         @for (contact of contactsSig(); track contact.type) {
             <div class="flex justify-center items-center">
-                <img src="/assets/images/{{ contact.type }}.svg" alt="{{ contact.type }}" class="w-16 h-16">
+                <img src="/assets/images/{{ contact.type }}.svg" alt="{{ contact.type }}" class="w-16 h-16" [attr.aria-label]="contact.type">
             </div>
         }
     </div>
 } @else {
-    <p class="text-center text-slate-400 italic mt-3">No contacts found.</p>
+    <p class="text-center text-slate-400 italic mt-3" aria-label="No contents">No contacts found.</p>
 }

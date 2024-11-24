@@ -3,13 +3,13 @@
         @for (post of postListSig()?.posts; track post.id) {
             <div class="flex justify-between items-center gap-3 text-xl pb-2 my-3 border-b-[1px] border-slate-600">
                 <div class="flex-shrink-0 text-blue-300 italic">{{ post.dateAdded }}</div>
-                <a [href]="post.link" target="_blank" class="text-slate-200 font-semibold text-wrap">{{ post.title }}</a>
+                <a [href]="post.link" target="_blank" class="text-slate-200 font-semibold text-wrap" [attr.aria-label]="post.title">{{ post.title }}</a>
             </div>
         }
         @if (postListSig()!.posts.length === 0) {
-            <p class="text-center text-slate-400 italic mt-3">No articles found.</p>
+            <p class="text-center text-slate-400 italic mt-3" aria-label="No contents">No articles found.</p>
         }
     </div>
 } @else {
-    <p class="text-center text-slate-400 italic mt-3">Pulling article list...</p>
+    <p class="text-center text-slate-400 italic mt-3" aria-label="downloading contents">Pulling article list...</p>
 }
