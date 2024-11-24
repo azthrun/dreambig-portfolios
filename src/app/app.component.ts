@@ -4,6 +4,7 @@ import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { AppService } from './services/app.service';
 import { NavlinksComponent } from './components/navlinks/navlinks.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'dbp-root',
@@ -19,7 +20,11 @@ import { LoadingComponent } from './components/loading/loading.component';
 })
 export class AppComponent {
   private readonly appService = inject(AppService);
+  private readonly titleService = inject(Title);
 
   public profileSig = this.appService.profileSig;
-  public selfDescription = computed(() => this.appService.profileSig()?.selfDescription);
+  public selfDescription = computed(() => {
+    this.titleService.setTitle(`Portfolio - ${this.appService.profileSig()?.portfolioOwner}`);
+    return this.appService.profileSig()?.selfDescription
+  });
 }
