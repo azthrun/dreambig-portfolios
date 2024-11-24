@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'dbp-loading',
-  imports: [],
   templateUrl: './loading.component.html',
-  styleUrl: './loading.component.scss'
 })
 export class LoadingComponent {
 

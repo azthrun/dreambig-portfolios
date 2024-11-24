@@ -3,9 +3,7 @@ import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'dbp-contacts',
-  imports: [],
   templateUrl: './contacts.component.html',
-  styleUrl: './contacts.component.scss'
 })
 export class ContactsComponent {
   private readonly appService = inject(AppService);

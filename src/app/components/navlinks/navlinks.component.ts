@@ -8,7 +8,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         RouterLinkActive,
     ],
     templateUrl: './navlinks.component.html',
-    styleUrl: './navlinks.component.scss'
 })
 export class NavlinksComponent {
 

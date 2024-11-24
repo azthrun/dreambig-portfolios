@@ -3,9 +3,7 @@ import { AppService } from '../../services/app.service';
 
 @Component({
     selector: 'dbp-titlebar',
-    imports: [],
     templateUrl: './titlebar.component.html',
-    styleUrl: './titlebar.component.scss'
 })
 export class TitlebarComponent {
   private readonly appService = inject(AppService);
