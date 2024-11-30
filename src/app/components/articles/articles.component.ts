@@ -8,5 +8,5 @@ import { AppService } from '../../services/app.service';
 export class ArticlesComponent {
   private readonly appService = inject(AppService);
 
-  public postListSig = this.appService.fetchPostLists();
+  public postsSig = this.appService.fetchPosts();
 }

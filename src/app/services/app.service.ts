@@ -4,7 +4,7 @@ import { catchError, map, of } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
 import environment from '../../environments/environment';
 import { Profile } from '../types/profile.type';
-import { PostList } from '../types/post.type';
+import { Post } from '../types/post.type';
 
 @Injectable()
 export class AppService {
@@ -16,7 +16,7 @@ export class AppService {
   private headers = environment.dataClient;
 
   private fetchSessionId(): Signal<string | undefined> {
-    var data$ = this.httpClient.post<{ id: string }>(`${this.configs.apiUrl}/sessions`, { 'userAgent': window.navigator.userAgent }, { headers: this.headers }).pipe(
+    var data$ = this.httpClient.post<{ id: string }>(`${this.configs.apiUrl}/sessions`, null, { headers: this.headers }).pipe(
       map((response) => {
         this.sessionId = response.id;
         return response.id;
@@ -36,7 +36,7 @@ export class AppService {
       this.fetchSessionId()();
     }
     const requestHeaders = { ...this.headers, 'Session-Id': this.sessionId ?? 'anonymous-session' };
-    var data$ = this.httpClient.get<Profile>(`${this.configs.apiUrl}/profiles/${this.profileId}`, { headers: requestHeaders }).pipe(
+    var data$ = this.httpClient.get<Profile>(`${this.configs.apiUrl}/profile`, { headers: requestHeaders }).pipe(
       catchError((error) => {
         console.error('Error fetching profile', error);
         return of(null);
@@ -45,19 +45,15 @@ export class AppService {
     return toSignal(data$);
   }
 
-  public fetchPostLists(): Signal<PostList | undefined> {
+  public fetchPosts(): Signal<Post[] | undefined> {
     if (this.sessionId === undefined) {
       this.fetchSessionId()();
     }
     const requestHeaders = { ...this.headers, 'Session-Id': this.sessionId ?? 'anonymous-session' };
-    var data$ = this.httpClient.get<PostList>(`${this.configs.apiUrl}/postLists/${this.profileId}`, { headers: requestHeaders }).pipe(
+    var data$ = this.httpClient.get<Post[]>(`${this.configs.apiUrl}/postLists/${this.profileId}`, { headers: requestHeaders }).pipe(
       catchError((error) => {
         console.error('Error fetching posts', error);
-        return of({
-          id: this.profileId,
-          profileId: this.profileId,
-          posts: [],
-        });
+        return of([]);
       }),
     );
     return toSignal(data$);
