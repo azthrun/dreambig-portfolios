@@ -11,7 +11,7 @@ export class AppService {
   private readonly httpClient = inject(HttpClient);
   private readonly configs = environment;
 
-  private profileId: string = environment.profileId;
+  private profileId?: string;
   private sessionId?: string;
   private headers = environment.dataClient;
 
